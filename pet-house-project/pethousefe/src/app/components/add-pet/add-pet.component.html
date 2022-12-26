@@ -1,0 +1,61 @@
+<!-- Add Pet Button  -->
+<div class="container" id="modal-add-pet">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <form #addForm="ngForm" (ngSubmit)="onSubmit()">
+                <div class="modal-header px-4">
+                    <h5 class="modal-title">Add new Pet</h5>
+                </div>
+                <div class="modal-body px-4">
+                    <div class="row mb-2">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" class="form-control" id="name" name="name" [(ngModel)]="name" placeholder="Spike" />
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="age">Age</label>
+                                <input type="text" class="form-control" id="age" name="age" [(ngModel)]="age" placeholder="5" />
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="form-group mb-4">
+                                <label for="kind">Kind</label>
+                                <input type="text" class="form-control" id="kind" name="kind" [(ngModel)]="kind" placeholder="Dog" />
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="form-group mb-4">
+                                <label for="owner">Owner</label>
+                                <input type="text" class="form-control" id="owner" name="owner" [(ngModel)]="owner" placeholder="John Doe" />
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="form-group mb-4">
+                                <label for="phone">Phone</label>
+                                <input type="text" class="form-control" id="phone" name="phone" [(ngModel)]="phone" placeholder="3337770909" />
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="form-group mb-4">
+                                <label for="imageUrl">Image</label>
+                                <input type="text" class="form-control" id="imageUrl" name="imageUrl" [(ngModel)]="imageUrl" placeholder="http://www.image.jpg" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer px-4">
+                    <button type="button" routerLink="/" class="btn btn-smoke btn-pill">Cancel</button>
+                    <button type="submit" class="btn btn-primary btn-pill">Save Pet</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
