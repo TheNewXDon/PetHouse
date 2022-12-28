@@ -10,6 +10,7 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddPetComponent } from './components/add-pet/add-pet.component';
 import { EditPetComponent } from './components/edit-pet/edit-pet.component';
+import { ModifyPetComponent } from './components/modify-pet/modify-pet.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { EditPetComponent } from './components/edit-pet/edit-pet.component';
     DashboardComponent,
     AddPetComponent,
     EditPetComponent,
+    ModifyPetComponent,
   ],
   imports: [
     BrowserModule,

@@ -49,4 +49,12 @@ export class EditPetComponent implements OnInit {
       
     }
   }
+
+  updateAnimal() {
+    this.animalService.updateAnimal(this.animal).subscribe(data => {
+
+    },
+    error => console.log(error))
+    
+  }
 }
