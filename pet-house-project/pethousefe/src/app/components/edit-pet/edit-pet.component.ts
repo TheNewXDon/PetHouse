@@ -10,7 +10,7 @@ import { AnimalService } from 'src/app/service/animal.service';
 })
 export class EditPetComponent implements OnInit {
   animal: Animal = new Animal();
-  idAnimal: number = +this.route.snapshot.paramMap.get('id')!;
+  idAnimal: number = +this.route.snapshot.params['id'];
   constructor(private animalService: AnimalService,
     private router: Router,
     private route: ActivatedRoute) { }
@@ -19,8 +19,8 @@ export class EditPetComponent implements OnInit {
     this.animal = new Animal();
     console.log(this.idAnimal);
     this.loadAnimal(this.idAnimal);
-    console.log('Animal Id: ' + this.animal.id);
-    console.log('Animal Name: ' + this.animal.name);
+    setTimeout(() => { console.log('Animal Id: ' + this.animal.id) }, 250);
+    setTimeout(() => { console.log('Animal Name: ' + this.animal.name) }, 250);
   }
 
   loadAnimal(id: number){

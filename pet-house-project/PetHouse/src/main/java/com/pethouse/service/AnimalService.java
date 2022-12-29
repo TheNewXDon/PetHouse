@@ -8,6 +8,7 @@ public interface AnimalService {
 
 	public List<Animal> getAll();
 	public Animal find(Integer id);
+	public List<Animal> findByName(String name);
 	public Animal save(Animal animal);
 	public Animal update(Animal animal);
 	public void delete(Integer id);

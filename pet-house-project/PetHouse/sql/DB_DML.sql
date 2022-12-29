@@ -1,3 +1,6 @@
+CREATE DATABASE IF NOT EXISTS `pethouse`;
+USE `pethouse`;
+
 DROP TABLE if EXISTS animal;
 CREATE TABLE if not exists animal(
 `id` INT NOT NULL AUTO_INCREMENT,
@@ -6,6 +9,8 @@ CREATE TABLE if not exists animal(
 `kind` VARCHAR(50) DEFAULT NULL,
 `phone` VARCHAR(50) DEFAULT NULL,
 `owner` VARCHAR(50) DEFAULT NULL,
+`email` VARCHAR(50) DEFAULT NULL,
+`notes` VARCHAR(255) DEFAULT NULL,
 `image_url` VARCHAR(50) DEFAULT NULL,
 `animal_code` VARCHAR(255) NOT NULL UNIQUE,
 PRIMARY KEY(`id`)

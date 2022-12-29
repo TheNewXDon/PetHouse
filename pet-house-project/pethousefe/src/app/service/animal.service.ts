@@ -17,6 +17,9 @@ export class AnimalService {
   public getAnimal(id: number): Observable<Animal> {
     return this.http.get<Animal>(`${this.apiServerUrl}/animal/find/` + id);
   }
+  public getAnimalByName(name: string): Observable<Animal[]> {
+    return this.http.get<Animal[]>(`${this.apiServerUrl}/animal/find/` + name);
+  }
   public saveAnimal(animal: Animal): Observable<Animal> {
     return this.http.post<Animal>(`${this.apiServerUrl}/animal/save`, animal);
   }

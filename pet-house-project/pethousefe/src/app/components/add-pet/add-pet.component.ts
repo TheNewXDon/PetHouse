@@ -17,6 +17,8 @@ export class AddPetComponent implements OnInit {
   kind!: string;
   owner!: string;
   phone!: string;
+  email!: string;
+  notes!: string;
   imageUrl!: string;
   constructor(private animalService: AnimalService, private router: Router) { }
 
@@ -30,6 +32,8 @@ export class AddPetComponent implements OnInit {
     this.animal.kind = this.kind;
     this.animal.owner = this.owner;
     this.animal.phone = this.phone;
+    this.animal.email = this.email;
+    this.animal.notes = this.notes;
     this.animal.imageUrl = this.imageUrl;
 
     this.animalService.saveAnimal(this.animal).subscribe(data => {

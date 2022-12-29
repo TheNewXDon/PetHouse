@@ -32,6 +32,12 @@ public class AnimalServiceImpl implements AnimalService {
 		return animalRepo.findAnimalById(id)
 				.orElseThrow(() -> new UserNotFoundException("User by id " + id + " was not found"));
 	}
+	
+	@Override
+	public List<Animal> findByName(String name) {
+		return animalRepo.findAnimalByName(name)
+				.orElseThrow(() -> new UserNotFoundException("Users by name " + name + " were not found"));
+	}
 
 	@Override
 	public Animal save(Animal animal) {
@@ -51,5 +57,7 @@ public class AnimalServiceImpl implements AnimalService {
 		animalRepo.deleteAnimalById(id);
 		
 	}
+
+	
 
 }

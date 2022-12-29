@@ -24,6 +24,9 @@ public class Animal implements Serializable {
 	private String phone;
 	private String owner;
 	private String imageUrl;
+	private String email;
+	private String notes;
+	
 	@Column(nullable = false, updatable = false)
 	private String animalCode;
 	
@@ -31,7 +34,7 @@ public class Animal implements Serializable {
 		
 	}
 	
-	public Animal(int id, String name, int age, String kind, String phone, String owner, String imageUrl,
+	public Animal(int id, String name, int age, String kind, String phone, String owner, String email, String notes, String imageUrl,
 			String animalCode) {
 		super();
 		this.id = id;
@@ -40,6 +43,8 @@ public class Animal implements Serializable {
 		this.kind = kind;
 		this.phone = phone;
 		this.owner = owner;
+		this.email = email;
+		this.notes = notes;
 		this.imageUrl = imageUrl;
 		this.animalCode = animalCode;
 	}
@@ -85,6 +90,21 @@ public class Animal implements Serializable {
 	}
 	public void setImageUrl(String imageUrl) {
 		this.imageUrl = imageUrl;
+	}
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getNotes() {
+		return notes;
+	}
+
+	public void setNotes(String notes) {
+		this.notes = notes;
 	}
 	public String getAnimalCode() {
 		return animalCode;

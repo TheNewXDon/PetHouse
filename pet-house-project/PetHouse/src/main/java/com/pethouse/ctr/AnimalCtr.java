@@ -42,6 +42,12 @@ public class AnimalCtr {
 		return new ResponseEntity<>(animal, HttpStatus.OK);
 	}
 	
+	@GetMapping("/find/{name}")
+	public ResponseEntity<List<Animal>> getAnimalByName(@PathVariable("name") String name) {
+		List<Animal> animals = animalService.findByName(name);
+		return new ResponseEntity<>(animals, HttpStatus.OK);
+	}
+	
 	@PostMapping("/save")
 	public ResponseEntity<Animal> saveAnimal(@RequestBody Animal animal) {
 		Animal newAnimal = animalService.save(animal);

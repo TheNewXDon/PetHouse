@@ -5,6 +5,8 @@ export class Animal {
     public kind: string;
     public phone: string;
     public owner: string;
+    public email: string;
+    public notes: string;
     public imageUrl: string;
     public animalCode: string;
     
@@ -15,6 +17,8 @@ export class Animal {
         this.kind = "";
         this.phone = "";
         this.owner = "";
+        this.email = "";
+        this.notes = "";
         this.imageUrl = "";
         this.animalCode = "";
     }

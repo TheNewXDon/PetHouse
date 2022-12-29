@@ -12,13 +12,13 @@ import { AnimalService } from 'src/app/service/animal.service';
 export class ModifyPetComponent implements OnInit {
   animal: Animal = new Animal();
   @ViewChild('modifyform') addForm!: NgForm;
-  name!: string;
+  /*name!: string;
   age!: number;
   kind!: string;
   owner!: string;
   phone!: string;
-  imageUrl!: string;
-  idAnimal: number = +this.route.snapshot.paramMap.get('id')!;
+  imageUrl!: string;*/
+  idAnimal: number = +this.route.snapshot.params['id'];
   constructor(private animalService: AnimalService,
     private router: Router,
     private route: ActivatedRoute) { }
@@ -27,8 +27,6 @@ export class ModifyPetComponent implements OnInit {
     this.animal = new Animal();
     console.log(this.idAnimal);
     this.loadAnimal(this.idAnimal);
-    console.log('Animal Id: ' + this.animal.id);
-    console.log('Animal Name: ' + this.animal.name);
   }
 
   loadAnimal(id: number){
@@ -59,12 +57,12 @@ export class ModifyPetComponent implements OnInit {
   }
 
   updateAnimal() {
-    this.animal.name = this.name;
+    /*this.animal.name = this.name;
     this.animal.age = this.age;
     this.animal.kind = this.kind;
     this.animal.owner = this.owner;
     this.animal.phone = this.phone;
-    this.animal.imageUrl = this.imageUrl;
+    this.animal.imageUrl = this.imageUrl;*/
 
     this.animalService.updateAnimal(this.animal).subscribe(data => {
 

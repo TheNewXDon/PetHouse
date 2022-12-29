@@ -26,21 +26,21 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="imageUrl">Image Url</label>
-                                        <input type="text" class="form-control" id="imageUrl" name="imageUrl" [(ngModel)]="imageUrl" value="{{animal.imageUrl}}" />
+                                        <input type="text" class="form-control" id="imageUrl" name="imageUrl" [(ngModel)]="animal.imageUrl" value="{{animal.imageUrl}}" />
                                     </div>
     
                                     <div class="card-body">
                                         <div class="form-group">
                                             <label for="name">Name</label>
-                                            <input type="text" class="form-control" id="name" name="name" [(ngModel)]="name" value="{{animal.name}}" style="width: 10em;"/>
+                                            <input type="text" class="form-control" id="name" name="name" [(ngModel)]="animal.name" value="{{animal.name}}" style="width: 10em;"/>
                                         </div>
 
                                         <!-- <h4 class="py-2">{{animal.name}}</h4> -->
                                         <div class="form-group">
-                                            <label for="kind">Kind</label>
-                                            <input type="text" class="form-control" id="kind" name="kind" [(ngModel)]="kind" value="{{animal.kind}}" />
-                                            <label for="age">Age</label>
-                                            <input type="text" class="form-control" id="age" name="age" [(ngModel)]="age" value="{{animal.age}}">
+                                            <label for="kind"><h4>Kind</h4></label>
+                                            <input type="text" class="form-control" id="kind" name="kind" [(ngModel)]="animal.kind" value="{{animal.kind}}">
+                                            <label for="age"><h4>Age</h4></label>
+                                            <input type="text" class="form-control" id="age" name="age" [(ngModel)]="animal.age" value="{{animal.age}}">
                                         </div><!--<p>Kind: {{animal.kind}}<br>Age: {{animal.age}}</p> -->
                                     </div>
                                 </div>
@@ -50,25 +50,23 @@
                         <div class="col-md-6">
                             <div class="contact-info px-4">
                                 <h4 class="mb-1">Pet Details</h4>
-                                <!-- <p class="text-dark font-weight-medium pt-4 mb-2">Email address</p>
-                                <p>{{animal.email}}</p> ù
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="imageUrl" name="imageUrl" [(ngModel)]="imageUrl" value="{{animal.imageUrl}}" />
-                                </div> -->
-                                <div class="form-group">
-                                    <label for="phone" class="text-dark font-weight-medium pt-4 mb-2">Phone Number</label>
-                                    <input type="text" class="form-control" id="phone" name="phone" [(ngModel)]="phone" value="{{animal.phone}}" />
+                                    <label for="email" class="text-dark font-weight-medium pt-4 mb-2"><h5>Email Address</h5></label>
+                                    <input type="text" class="form-control" id="imageUrl" name="imageUrl" [(ngModel)]="animal.email" value="{{animal.email}}" />
                                 </div>
                                 <div class="form-group">
-                                    <label for="owner" class="text-dark font-weight-medium pt-4 mb-2">Owner Number</label>
-                                    <input type="text" class="form-control" id="owner" name="owner" [(ngModel)]="owner" value="{{animal.owner}}" />
+                                    <label for="phone" class="text-dark font-weight-medium pt-4 mb-2"><h5>Phone Number</h5></label>
+                                    <input type="text" class="form-control" id="phone" name="phone" [(ngModel)]="animal.phone" value="{{animal.phone}}" />
                                 </div>
-                                <!-- <p class="text-dark font-weight-medium pt-4 mb-2">Phone Number</p>
-                                <p>{{animal.phone}}</p>
-                                <p class="text-dark font-weight-medium pt-4 mb-2">Owner</p>
-                                <p>{{animal.owner}}</p> -->
-                                <!-- <p class="text-dark font-weight-medium pt-4 mb-2">Event</p>
-                                <p>animal.notes</p> -->
+                                <div class="form-group">
+                                    <label for="owner" class="text-dark font-weight-medium pt-4 mb-2"><h5>Owner Number</h5></label>
+                                    <input type="text" class="form-control" id="owner" name="owner" [(ngModel)]="animal.owner" value="{{animal.owner}}" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="notes" class="text-dark font-weight-medium pt-4 mb-2"><h5>Note</h5></label>
+                                    <textarea rows="4" type="text" id="notes" class="md-textarea md-textarea-auto form-control" mdbInput
+                                        [(ngModel)]="animal.notes" name="notes" value="{{animal.notes}}"></textarea>
+                                </div>
                             </div>
                         </div>
                     </div>
