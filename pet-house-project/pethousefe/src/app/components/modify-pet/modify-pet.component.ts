@@ -27,6 +27,7 @@ export class ModifyPetComponent implements OnInit {
     this.animal = new Animal();
     console.log(this.idAnimal);
     this.loadAnimal(this.idAnimal);
+    
   }
 
   loadAnimal(id: number){

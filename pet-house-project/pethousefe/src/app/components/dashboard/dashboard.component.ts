@@ -29,6 +29,21 @@ export class DashboardComponent implements OnInit {
     
   }
 
+  public searchAnimals(key: string): void {
+    console.log(key);
+    const results: Animal[] = [];
+    for (const animal of this.animals) {
+      if (animal.name.toLowerCase().indexOf(key.toLowerCase()) !== -1
+      || animal.owner.toLowerCase().indexOf(key.toLowerCase()) !== -1) {
+        results.push(animal);
+      }
+    }
+    this.animals = results;
+    if (results.length === 0 || !key) {
+      this.getAnimals();
+    }
+  } 
+
   /*public onOpenModal(animal: Animal, mode: string) {
     const container = document.getElementById('main-container');
     const button = document.createElement('button');

@@ -5,7 +5,7 @@
             <div class="card-header align-items-center px-3 px-md-5">
                 <h2>Pets</h2>
                 <form class="form-inline my-2 my-lg-0">
-                    <input type="search" name="key" id="searchName" class="form-control mr-sm-2" placeholder="Search pet..."/>
+                    <input type="search" (ngModelChange)="searchAnimals(key.value)" #key="ngModel" ngModel name="key" id="search" class="form-control mr-sm-2" placeholder="Search pet..."/>
                 </form>
                 <button type="button" routerLink="add" class="btn btn-primary" data-toggle="modal" data-target="#modal-add-pet #addAnimalModal">Add Pet</button>
             </div>
@@ -21,11 +21,11 @@
                                     <ul class="list-unstyled text-smoke text-smoke">
                                         <li class="d-flex">
                                             <i class="mdi mdi-map mr-1"></i>
-                                            <span>Owner: {{animal?.owner}}</span>
+                                            <span>{{animal?.owner}}</span>
                                         </li>
                                         <li class="d-flex">
                                             <i class="mdi mdi-email mr-1"></i>
-                                            <span>Email: {{animal?.email}}</span>
+                                            <span>{{animal?.email}}</span>
                                         </li>
                                         <li class="d-flex">
                                             <i class="mdi mdi-phone mr-1"></i>
@@ -39,6 +39,15 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
+
+<div *ngIf="animals?.length == 0" class="col-lg-12 col-md-12 col-xl-12">
+    <div class="alert alert-info" role="alert">
+        <h4 class="alert-heading">NO PETS!</h4>
+        <p>No pets were found</p>
+    </div>
+</div>
 
         
 
